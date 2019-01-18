@@ -1,0 +1,12 @@
+=====================================
+ Derrubar usuario logado no sistema 
+=====================================
+
+-descubra o tty que o usuario esta logado:
+    w
+
+-list os processos sshd e observe o PID vinculado ao tty descoberto no passo anterior:
+    ps faux | grep sshd
+
+-mate o processo pelo PID:
+    kill -9 (id_processo)

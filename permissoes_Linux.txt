@@ -1,0 +1,26 @@
+Permissões possíveis
+
+Abaixo segue a tabela com os códigos de permissão (formato octal):
+
+
+|   | r | w | x |                      Descrição                      
+| 0 | - | - | - | Nenhuma permissão de acesso.                        
+| 1 | - | - | x | Permissão somente de execução (x).                  
+| 2 | - | x | - | Permissão somente de gravação (w).                  
+| 3 | - | x | x | Permissões de gravação e execução (wx).             
+| 4 | x | - | - | Permissão somente de leitura (r).                   
+| 5 | x | - | x | Permissões de leitura e execução (rx).              
+| 6 | x | x | - | Permissões de leitura e gravação (rw).              
+| 7 | x | x | x | Permissão total (leitura, gravação e execução, rwx).
+
+
+Exemplos mais comuns
+
+Permissão 644:
+644 ou [rw-r--r--]: Owner com permissão de leitura e gravação, grupo com permissão somente de leitura, outros com permissão somente de leitura.
+
+Permissão 755:
+755 ou [rwxr-xr-x]: Owner com permissão total, grupo com permissão de leitura e execução, outros com permissão de leitura e execução.
+
+Permissão 777:
+777 ou [rwxrwxrwx]: Owner com permissão total, grupo com permissão total, outros com permissão total.
