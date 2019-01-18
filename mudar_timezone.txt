@@ -1,0 +1,9 @@
+FERRAMENTA LINUX PARA MUDAR A TIMEZONE:
+ -timedatectl
+
+exemplos:
+	timedatectl status
+	timedatectl list-timezones
+	timedatactl set-timezone "America/Sao_Paulo"
+
+PS: apos alterar, verifique o arquivo "cat /etc/timezone"
