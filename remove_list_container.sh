@@ -13,11 +13,19 @@
 
 #--------------------------------------------------------------------
 
+RED='\033[0;31m' 
+
 list_con=$(docker ps -a --filter "exited=0" | awk '{print $1}' | sed '1d')
 
-for i in $list_con; do
-	docker inspect $i | grep Name | head -n 1
-	docker rm $i
-	echo "removido"
+if [ -z $list_con ]
+then
+	echo ""
+	echo -e "${RED}Nao existem containers em modo exited..\n"
 
-done
+else
+	for i in $list_con; do
+                docker inspect $i | grep Name | head -n 1
+                docker rm $i
+                echo "removido"
+        done
+fi
